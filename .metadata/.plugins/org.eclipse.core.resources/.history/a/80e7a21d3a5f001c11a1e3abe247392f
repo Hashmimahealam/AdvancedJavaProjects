@@ -1,0 +1,19 @@
+package com.java8.features;
+
+public class Test {
+
+//	 2,3 2+3=5 => 5*5=25
+	int addition(int i,int l) {
+		return i+l;
+		
+		
+	}
+	void squre(int s) {
+		int sqr=s*s;
+		System.out.println(sqr);
+	}
+	public static void main(String[] args) {
+		Test t= new Test();
+		t.addition(2, 3);
+	}
+}

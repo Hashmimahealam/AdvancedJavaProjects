@@ -1,0 +1,33 @@
+package com.java8.features;
+
+/**
+ * Lambda expression is an implementation of interface(Demo) i.e. if we have an interface which have only one method 
+ * then we can provide its implementation in one line without creating any implementation class
+ * in this implementation we get only 1.class and using Demo.class 
+ * 1)ExampleWithLambdaExp
+ * @author Admin
+ *
+ */
+/**
+ * Let's create an interface having method which have parameter also Demo1
+ * @author Admin
+ *
+ */
+interface Demo1{
+	void show(int i);
+}
+public class ExampleWithLambdaExp {
+
+	public static void main(String[] args) {
+		//create object of interface
+		Demo obj;
+		obj= () -> System.out.println("Hello show method of interface Demo. The implementation is given by lambda expression");//this line is implementation of interface Demo
+		obj.show();
+		Demo1 obj1;
+		obj1=(int i) -> System.out.println("Hello Demo1's method show(int i) this is implementation  "+ i);
+		obj1.show(20);
+	}
+	
+
+}
+

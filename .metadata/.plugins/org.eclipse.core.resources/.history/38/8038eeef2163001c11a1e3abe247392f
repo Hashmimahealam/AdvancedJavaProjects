@@ -1,0 +1,23 @@
+package com.java8.features;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.Consumer;
+
+class ConsumerImplementation implements Consumer<Integer>{
+
+	@Override
+	public void accept(Integer i) {
+		System.out.println(i);
+	}
+	
+}
+public class ConsumerInterfaceInJava8 {
+
+	public static void main(String[] args) {
+		List<Integer> values= Arrays.asList(3,4,5,6,7);
+		Consumer<Integer> consumerObj=new ConsumerImplementation();
+		values.forEach(consumerObj);
+	}
+
+}

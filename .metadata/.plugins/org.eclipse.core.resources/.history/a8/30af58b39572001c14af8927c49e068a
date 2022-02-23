@@ -1,0 +1,79 @@
+package com.streams;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
+
+public class FindElementsExample {
+
+	public static void main(String[] args) {
+		List<Integer> list=Arrays.asList(1,2,3,4,5,6,8,9,1);
+		//findFirst() and findAny() of stream
+		Optional<Integer> element=list.stream().findFirst();
+		if(element.isPresent()) {
+			System.out.println(element.get());
+		}else
+			System.out.println("Stream is empty");
+		Optional<Integer> element1=list.stream().findAny();
+		if(element1.isPresent())
+			System.out.println(element1.get());
+		else
+			System.out.println("Stream is empty");
+		
+		
+		//array manipulation
+		
+		int[] a= {111,20,30,40,50};
+		int[] b= {39,45};
+		int[] aa=new int[a.length];
+		int[] bb=new int[a.length];
+		int[] added=new int[aa.length+bb.length];
+		for(int i=0;i<a.length;i++) {
+			for(int j=i+1;j<a.length;j++) {
+				int temp=0;
+				if(a[i]>a[j]) {
+					temp=a[i];
+					a[i]=a[j];
+					a[j]=temp;
+				}
+			}
+			aa[i]=a[i];
+			System.out.println(aa[i]);
+		}
+		for(int i=0;i<b.length;i++) {
+			for(int j=i+1;j<b.length;j++) {
+				int temp=0;
+				if(b[i]>b[j]) {
+					temp=b[i];
+					b[i]=b[j];
+					b[j]=temp;
+				}
+			}
+			bb[i]=b[i];
+			System.out.println(bb[i]);
+		}
+		for(int i=0;i<added.length;i++) {
+			
+			for(int j=0;j<aa.length;j++) {
+				for(int k=0;k<bb.length;k++) {
+				int temp=0;
+				if(aa[j]>bb[k]) {
+					temp=aa[j];
+					aa[j]=bb[k];
+					bb[k]=temp;
+				}
+			}
+			bb[i]=b[i];
+			System.out.println(bb[i]);
+		}
+		/*
+		 * int sum = 0; for(int aa:a) { sum=sum+aa; } System.out.println(sum); int
+		 * max=a[0]; for(int i=1;i<a.length;i++) { if(a[i]>max) { max=a[i]; }
+		 * 
+		 * } System.out.println(max); int[] c=a; // ref:-
+		 * https://www.tutorialspoint.com/Array-Copy-in-Java c=b;
+		 * System.out.println(c[0]); for(int cc:c) { System.out.println(cc); }
+		 */
+	}
+	}
+}

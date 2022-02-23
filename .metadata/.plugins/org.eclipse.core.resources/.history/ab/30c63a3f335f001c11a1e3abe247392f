@@ -1,0 +1,23 @@
+package com.java8.features;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+/**
+ * Hello world!
+ *
+ */
+public class Java8Stream 
+{
+    public static void main( String[] args )
+    {
+    	List<Integer> ls = new ArrayList<Integer>();
+    	ls.add(1);
+    	ls.add(11);
+    	ls.add(10);
+    	ls.add(12);
+    	
+    	Double collect = ls.stream().collect(Collectors.averagingInt(x -> x));
+    }
+}

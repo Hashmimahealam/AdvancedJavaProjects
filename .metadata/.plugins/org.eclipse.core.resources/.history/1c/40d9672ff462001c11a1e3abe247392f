@@ -1,0 +1,35 @@
+package com.java8.features;
+
+interface Demo{
+	void show();
+}
+/**
+ * This class is used for implementing Demo interface and have body of show method
+ * we can use anonymous class or lambda expression also because in this application we get 2 .classes
+ * 1)Test1.class  2)ExampleWithoutLambda.class
+ * @author Admin
+ *
+ */
+class Test1 implements Demo{   
+
+	@Override
+	public void show() {
+		System.out.println("Hello show method");
+	}
+	
+}
+/**
+ * The aboue class is called only one time so it recommended to use lambda expression
+ * @author Admin
+ *
+ */
+public class ExampleWithoutLambda {
+
+	public static void main(String[] args) {
+		Demo obj;   //object of Interface is reference of a class
+		obj= new Test1();
+		obj.show();
+		
+	}
+
+}

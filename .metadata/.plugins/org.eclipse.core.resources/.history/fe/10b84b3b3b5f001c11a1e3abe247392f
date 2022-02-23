@@ -1,0 +1,36 @@
+package com.java8.features;
+
+public class Test {
+
+//	 2,3 2+3=5 => 5*5=25
+	/**
+	 * this method returns addition of 2 numbers
+	 * @param s
+	 * @return
+	 */
+	static int addition(int i,int l) {
+		return i+l;
+	}
+	
+	static int subst(int i ,int j)
+	{
+		return i-j;
+	}
+	
+	/**
+	 * returns square of a number
+	 * @param s
+	 * @return
+	 */
+	static int squre(int s) {
+		return s*s;
+	}
+	public static void main(String[] args) {
+		int squre = squre(addition(2,3));
+		System.out.println(squre);
+		
+		System.out.println(squre(subst(5, 2)));
+		
+		System.out.println(squre(4));
+	}
+}

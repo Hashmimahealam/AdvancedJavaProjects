@@ -1,0 +1,15 @@
+package com.java8.features;
+
+public class Test {
+
+//	 2,3 2+3=5 => 5*5=25
+	void m1(int i,int l) {
+		int sum=i+l;
+		int sqr=sum*sum;
+		System.out.println(sqr);
+	}
+	public static void main(String[] args) {
+		Test t= new Test();
+		t.m1(2, 3);
+	}
+}

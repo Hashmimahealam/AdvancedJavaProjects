@@ -1,0 +1,14 @@
+package com.functionalInterface;
+
+import java.util.function.Function;
+
+public class FunctionalDemo3 {
+
+	public static void main(String[] args) {
+		Function<String, Integer> function=(s)->s.length();
+		Function<Integer, Integer> function1=(num)-> num*2;
+		Integer integer=function.andThen(function1).apply("India");
+		System.out.println(integer);
+	}
+
+}

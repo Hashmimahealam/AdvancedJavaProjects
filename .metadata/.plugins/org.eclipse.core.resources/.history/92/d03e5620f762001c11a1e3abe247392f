@@ -1,0 +1,25 @@
+package com.java8.features;
+
+/**
+ * In this we also get 2 .classes and using Demo.class also 
+ * 1)ExampleWithAnonymousCls.class  2) ExampleWithAnonymousCls$1.class 
+ * Therefore it is recommended to use lambda expression
+ * @author Admin
+ *
+ */
+public class ExampleWithAnonymousCls {
+
+	public static void main(String[] args) {
+		Demo obj;    //Demo is interface
+		 //Test1 is a class which implements Demo 
+		//that is object of interface is reference of class
+		obj=new Demo() {
+			public void show() {
+				System.out.println("Hello show method in anonymous class");
+			}
+		};
+		obj.show();
+		
+	}
+
+}

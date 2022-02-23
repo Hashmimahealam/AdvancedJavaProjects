@@ -1,0 +1,25 @@
+package com.functionalInterface;
+
+import java.util.Scanner;
+import java.util.function.Function;
+
+public class FunctionalDemo2 {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		System.out.println("Please give any integer number");
+		int number=s.nextInt();
+		Function<Integer, String> function=new Function<Integer, String>() {
+
+			@Override
+			public String apply(Integer i) {
+				if(i%2==0)
+				return "The Number "+i+" is even";
+				else
+					return "The Number "+i+" is odd";
+			}
+		};
+		System.out.println(function.apply(number));
+	}
+
+}
